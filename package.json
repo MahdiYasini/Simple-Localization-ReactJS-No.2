@@ -12,7 +12,8 @@
     "react-dom": "^16.13.1",
     "react-i18next": "^11.3.4",
     "react-icons": "^3.9.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-scroll": "^1.7.16"
   },
   "scripts": {
     "start": "react-scripts start",
