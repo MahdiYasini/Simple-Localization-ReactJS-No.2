@@ -1,0 +1,61 @@
+{
+    "translation": {
+        "navbar": {
+            "logo":{
+                "be": "Be a",
+                "pilot": "PILOT"
+            },
+            "menu": {
+                "home": "Home",
+                "why": "Why",
+                "who": "Who",
+                "Contact": "Contact"
+            }
+        },
+        "header": {
+            "title": "Days come to pass, make your",
+            "titleH1": "DREAM",
+            "titleTo": "to",
+            "titleH2": "REAL",
+            "paragraph": "Learning to fly an airplane taught me a way of thinking, an approach to problem-solving that was applicable and effective. Pilots are very methodical and meticulous, and artists tend not to be.",
+            "btn": "Read More"
+        },
+        "section_1": {
+            "why": "Why",
+            "choose": "choose us",
+            "h3_1": "Money",
+            "h3_1_p": "Of course, money is very important to each of us, so we have the cheapest offer in the whole country.",
+            "h3_2": "Certificate",
+            "h3_2_p": "You can use your certificate while around the world, that's awesome isn't it?",
+            "h3_3": "Teacher",
+            "h3_3_p": "Our teachers are the best and most knowledgeable, you can trust us easily."
+        },
+        "section_2": {
+            "who": "Who",
+            "we": "We Are",
+            "paragraph": "We are the first institute of fly in IRAN. We have more than 200 pilot and best planes they're on for you. we have in touch with Iran Air, Mahan Air, Lufthansa Airline and KLM.",
+            "h3": "Our Team",
+            "li_1":"Mahdi Yasini: CEO and CO Founder",
+            "li_2":"Mahdi Nasiri: Senior Dev Ops",
+            "li_3":"Karim Benzema: Technical manager",
+            "li_4":"Maximilian Schwarzamuller: Team Leader",
+            "li_5":"Naghi Mamoli: Accountant"
+        },
+        "section_3": {
+            "our": "our",
+            "partners": "Partners"
+        },
+        "section_4": {
+            "h2": "Contact Us",
+            "label_name": "Name",
+            "label_email": "Email",
+            "label_phone": "Phone Number",
+            "label_message": "Message",
+            "btn_value": "send"
+        },
+        "footer": {
+            "copyright": "Copyright",
+            "paragraph": " 2020, ABOuZAR, All Rights Reserved"
+        }
+    }
+}
