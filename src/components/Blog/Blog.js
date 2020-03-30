@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import { FaPlane, FaMoneyBillAlt, FaCertificate, } from "react-icons/fa";
@@ -198,9 +199,9 @@ const Blog = () => {
 
     const { t, i18n } = useTranslation();
     console.log('t', t())
-    const changeLanguageHandler = () => {
+    const changeLanguageHandler = (lang) => {
         console.log('object')
-        i18n.changeLanguage('en');
+        i18n.changeLanguage(lang);
     }
     // {t('menubar.home')}
 
@@ -259,7 +260,20 @@ const Blog = () => {
                             {t('navbar.menu.contact')}
                         </Link>
                     </li>
-
+                    <li>
+                        <a
+                            href = "#"
+                            onClick = {() => changeLanguageHandler('en')}>
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href = "#"
+                            onClick = {() => changeLanguageHandler('fa')}>
+                            فارسی
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <header
