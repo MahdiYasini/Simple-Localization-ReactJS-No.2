@@ -4,6 +4,7 @@ import { FaPlane, FaMoneyBillAlt, FaCertificate, } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 import { Link } from 'react-scroll'
 
+import { useTranslation } from 'react-i18next'
 
 import showCaseImage from '../../assets/images/showCase.jpg'
 import whoWeAreImage from '../../assets/images/who.jpg'
@@ -195,15 +196,23 @@ const useStyles = makeStyles({
 const Blog = () => {
     const classes = useStyles();
 
+    const { t, i18n } = useTranslation();
+    console.log('t', t())
+    const changeLanguageHandler = () => {
+        console.log('object')
+        i18n.changeLanguage('en');
+    }
+    // {t('menubar.home')}
+
     return (
         <>
             <nav className={classes.navbar}>
                 <h1>
                     <span className={classes.textPrimary}>
                         <FaPlane />
-                        &nbsp;Be a&nbsp;
+                        &nbsp;{t('navbar.logo.be')}&nbsp;
                     </span>
-                    PILOT
+                    {t('navbar.logo.pilot')}
                 </h1>
                 <ul>
                     <li>
@@ -214,7 +223,7 @@ const Blog = () => {
                             smooth={true}
                             offset={30}
                             duration={1000}>
-                            Home
+                            {t('navbar.menu.home')}
                         </Link>
                     </li>
                     <li>
@@ -225,7 +234,7 @@ const Blog = () => {
                             smooth={true}
                             offset={30}
                             duration={1000}>
-                            Why
+                            {t('navbar.menu.why')}
                         </Link>
                     </li>
                     <li>
@@ -236,7 +245,7 @@ const Blog = () => {
                             smooth={true}
                             offset={30}
                             duration={1000}>
-                            Who
+                            {t('navbar.menu.who')}
                         </Link>
                     </li>
                     <li>
@@ -247,7 +256,7 @@ const Blog = () => {
                             smooth={true}
                             offset={30}
                             duration={1000}>
-                            Contact
+                            {t('navbar.menu.contact')}
                         </Link>
                     </li>
 
@@ -258,20 +267,20 @@ const Blog = () => {
                 className={classes.showCase}>
                 <div className={classes.showCaseContent}>
                     <h1 className={classes.lHeading}>
-                        Days come to pass, make your
+                        {t('header.title')}
                         <span className={classes.textPrimary}>
-                            &nbsp;DREAM
+                            &nbsp;{t('header.titleH1')}
                         </span>
-                        &nbsp;to&nbsp;
+                        &nbsp;{t('header.titleTo')}&nbsp;
                         <span className={classes.textPrimary}>
-                            REAL
+                            {t('header.titleH2')}
                         </span>
                     </h1>
                     <p className={classes.lead}>
-                        Learning to fly an airplane taught me a way of thinking, an approach to problem-solving that was applicable and effective. Pilots are very methodical and meticulous, and artists tend not to be.
+                        {t('header.paragraph')}
                     </p>
                     <a href="/" className={classes.btn}>
-                        Read More
+                        {t('header.btn')}
                     </a>
                 </div>
             </header>
@@ -281,36 +290,36 @@ const Blog = () => {
                 <div className={classes.container}>
                     <h2 className={`${classes.textCenter} ${classes.mHeading}`}>
                         <span className={classes.textPrimary}>
-                            Why&nbsp;
+                            {t('section_1.why')}&nbsp;
                         </span>
-                        choose us
+                        {t('section_1.choose')}
                     </h2>
                     <div className={classes.items}>
                         <div className={classes.item}>
                             <FaMoneyBillAlt className={classes.mHeading} />
                             <div>
                                 <h3>
-                                    Money
+                                    {t('section_1.h3_1')}
                                 </h3>
-                                <p>Of course, money is very important to each of us, so we have the cheapest offer in the whole country.</p>
+                                <p>{t('section_1.h3_1_p')}</p>
                             </div>
                         </div>
                         <div className={classes.item}>
                             <FaCertificate className={classes.mHeading} />
                             <div>
                                 <h3>
-                                    Certificate
+                                    {t('section_1.h3_2')}
                                 </h3>
-                                <p>You can use your certificate while around the world, that's awesome isn't it?</p>
+                                <p>{t('section_1.h3_2_p')}</p>
                             </div>
                         </div>
                         <div className={classes.item}>
                             <GiTeacher className={classes.mHeading} />
                             <div>
                                 <h3>
-                                    Teacher
+                                    {t('section_1.h3_3')}
                                 </h3>
-                                <p>Our teachers are the best and most knowledgeable, you can trust us easily.</p>
+                                <p>{t('section_1.h3_3_p')}</p>
                             </div>
                         </div>
                     </div>
@@ -324,24 +333,22 @@ const Blog = () => {
                     className={`${classes.whoText} ${classes.bgDark} ${classes.p_2}`}>
                     <h2 className={classes.mHeading}>
                         <span className={classes.textPrimary}>
-                            Who&nbsp;
+                            {t('section_2.who')}&nbsp;
                             </span>
-                        We Are
-                        </h2>
+                        {t('section_2.we')}
+                    </h2>
                     <p>
-                        We are the first institute of fly in IRAN.
-                        We have more than 200 pilot and best planes they're on for you.
-                        we have in touch with Iran Air, Mahan Air, Lufthansa Airline and KLM.
-                        </p>
+                        {t('section_2.paragraph')}
+                    </p>
                     <h3>
-                        Our Team
-                        </h3>
+                        {t('section_2.h3')}
+                    </h3>
                     <ul className={classes.list}>
-                        <li>Mahdi Yasini: CEO and CO Founder</li>
-                        <li>Mahdi Nasiri: Senior Dev Ops</li>
-                        <li>Karim Benzema: Technical manager</li>
-                        <li>Maximilian Schwarzamuller: Team Leader</li>
-                        <li>Naghi Mamoli: Accountant</li>
+                        <li>{t('section_2.li_1')}</li>
+                        <li>{t('section_2.li_2')}</li>
+                        <li>{t('section_2.li_3')}</li>
+                        <li>{t('section_2.li_4')}</li>
+                        <li>{t('section_2.li_5')}</li>
                     </ul>
                 </div>
             </section>
@@ -350,10 +357,10 @@ const Blog = () => {
                 <div className={classes.container}>
                     <h2 className={`${classes.mHeading} ${classes.textCenter}`}>
                         <span className={classes.textPrimary}>
-                            Our&nbsp;
+                            {t('section_3.our')}&nbsp;
                             </span>
-                            Partners
-                        </h2>
+                        {t('section_3.partners')}
+                    </h2>
                     <div className={`${classes.partnerItems} ${classes.py_1}`}>
                         <div>
                             <img src={iranAirLogo} alt="partners" />
@@ -377,26 +384,28 @@ const Blog = () => {
                 name="contact"
                 className={classes.contact}>
                 <div className={`${classes.contactForm} ${classes.bgPrimary} ${classes.p_2}`}>
-                    <h2 className={classes.mHeading}>Contact Us</h2>
+                    <h2 className={classes.mHeading}>
+                    {t('section_3.partners')}
+                    </h2>
                     <form>
                         <div className={classes.formGroup}>
-                            <label for="name">Name</label>
+                            <label htmlFor="name">{t('section_4.label_name')}</label>
                             <input type="text" name="name" id="name" placeholder="Enter Name" />
                         </div>
                         <div className={classes.formGroup}>
-                            <label for="email">Email</label>
+                            <label htmlFor="email">{t('section_4.label_email')}</label>
                             <input type="email" name="email" id="email" placeholder="email" />
                         </div>
                         <div className={classes.formGroup}>
-                            <label for="phone">Phone Number</label>
+                            <label htmlFor="phone">{t('section_4.label_phone')}</label>
                             <input type="text" name="phone" id="phone" placeholder="Enter Phone Number" />
                         </div>
                         <div className={classes.formGroup}>
-                            <label for="message">Message</label>
+                            <label htmlFor="message">{t('section_4.label_message')}</label>
                             <textarea type="text" name="message" id="message" placeholder="message"></textarea>
                         </div>
                         <div className={classes.formGroup}>
-                            <input type="submit" value="send" className={`${classes.btn} ${classes.btnDark} ${classes.formButton}`} />
+                            <input type="submit" value= {t('section_4.btn_value')} className={`${classes.btn} ${classes.btnDark} ${classes.formButton}`} />
                         </div>
                     </form>
                 </div>
@@ -406,7 +415,7 @@ const Blog = () => {
             </section>
             <footer className={`${classes.bgDark} ${classes.textCenter} ${classes.py_1}`}>
                 <div className={classes.container}>
-                    <p>Copyright &copy; 2020, ABOuZAR, All Rights Reserved</p>
+                    <p>{t('footer.copyright')} &copy; {t('footer.paragraph')}</p>
                 </div>
             </footer>
         </>
